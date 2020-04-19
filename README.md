@@ -13,7 +13,7 @@ standalone mode.
 
 The following is the test plan template that we use for each release:
 
-<insert link>
+[Test Plan Template](https://github.com/kafkaesque-io/pulsar-test-results/blob/master/pulsar-test-plan.md)
 
 We strive to continually expand and improve this test plan to ensure the highest quality releases of Apache Pulsar. Comments and suggests are welcome.
 
@@ -22,5 +22,5 @@ We strive to continually expand and improve this test plan to ensure the highest
 ### Apache Pulsar 2.5.1 Candidate 4
 
 * Repository: [apache/pulsar](https://github.com/apache/pulsar)
-* Tag: v2.5.1-candidate-2
-* Results: <insert link>
+* Tag: v2.5.1-candidate-4
+* Results: [v2.5.1-candidate-4](https://github.com/kafkaesque-io/pulsar-test-results/blob/master/results-apache-pulsar-v2.5.1-candidate-4.md)
