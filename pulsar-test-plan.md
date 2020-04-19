@@ -50,7 +50,6 @@ This can be tested using Pulsar standalone.
 - [ ] Connect Failover subscription
 - [ ] Multiple clients on failover subscription
 - [ ] Only one client on failover sub receives messages
-
 - [ ] Connect Shared subscription
 - [ ] Multiple clients on shared subscription, round robin delivery
 - [ ] Add/remove clients to shared subscription while sending messages
@@ -60,14 +59,12 @@ This can be tested using Pulsar standalone.
 - [ ] Manual topic create, send messages on topic
 - [ ] Attempt to delete topic with active producers/consumers
 - [ ] Force delete topic with active producers/consumers
-
 - [ ] Topic create with partitions
 - [ ] Send messages to partition topic
 - [ ] Receive messages with client connected to all partitions
 - [ ] Receive messages with client connected to a single partition
 - [ ] Topic delete with partitions
 - [ ] Delete one partition from topic. Can still send/receive messages
-
 - [ ] Deleting topic deletes all partitions
 - [ ] Deleting topic with some partitions already deleted removed remaining partitions
 - [ ] Stats for non-partitioned topics are correct
@@ -78,10 +75,8 @@ This can be tested using Pulsar standalone.
 - [ ] Create subscription on non-partition topic
 - [ ] Create multiple subscriptions on non-partitioned topic
 - [ ] Subscription type is set when consumer connects
-
 - [ ] Create subscription with earliest message
 - [ ] Create subscription starting with specific message
-
 - [ ] Create subscription on partitioned topic; subscription shows on all partitions
 - [ ] Delete subscription on partitioned topic; subscription deleted on all partitions
 - [ ] Stats for subscriptions are correct
@@ -93,7 +88,6 @@ This can be tested using Pulsar standalone.
 - [ ] Skip some messages in a subscription
 - [ ] Rewind messages in a subscription to a time
 - [ ] Rewind messages ins a subscription to a message ID
-
 - [ ] Peek at messages in a subscription on partitioned topic
 - [ ] Skip all messages in a subscription on partitioned topic
 - [ ] Skip some messages in a subscription on partitioned topic
@@ -109,16 +103,12 @@ This can be tested using Pulsar standalone.
 
 ### Python (C++ wrapped) client
 
-Since new client version won't be released, use previous version
-
 - [ ] Connect Python client with TLS and token-based authentication
 - [ ] Producer on secure Python client
 - [ ] Consumer on secure Python client
 - [ ] Reader on secure Python client
 
 ### Java client
-
-Since new client version won't be released, use previous version
 
 - [ ] Connect Java client with TLS and token-based authentication
 - [ ] Producer on secure Java client
