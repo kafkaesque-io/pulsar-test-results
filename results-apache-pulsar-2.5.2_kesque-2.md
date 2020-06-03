@@ -1,4 +1,4 @@
-# TEMPLATE: System tests for Pulsar releases
+# System tests for Pulsar 2.5.2_kesque_2 
 
 This document describes the system tests that are to be executed on a candidate Pulsar release.
 
