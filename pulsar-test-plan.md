@@ -149,6 +149,12 @@ This can be tested using Pulsar standalone.
 - [ ] Non-persistent messages can be sent and received
 - [ ] Stats for non-persistent messages are correct
 
+### Resource clean up
+- [ ] Persistent topics with no consumers/producers/subscriptions are removed
+- [ ] Non-persistent topics with no consumers/producers/subscriptions are removed
+- [ ] Partitioned topics with no consumers/producers/subscriptions are removed     
+- [ ] Subscriptions with no backlog are removed (when enabled)  
+
 ### Tiered storage
 
 - [ ] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
@@ -186,3 +192,17 @@ This can be tested using Pulsar standalone.
 - [ ] Start all instances of a sink
 - [ ] Start one instance of a sink
 - [ ] End-to-end sink test using JDBC sink. Publish messages that populate mysql table.
+
+### Source
+
+- [ ] Add source from built-ins
+- [ ] Delete a source
+- [ ] Update a source
+- [ ] Create source with multiple instances
+- [ ] Restart all instances of a source
+- [ ] Restart one instance of a source
+- [ ] Stop all instances of a source
+- [ ] Stop one instance of a source
+- [ ] Start all instances of a source
+- [ ] Start one instance of a source 
+- [ ] End-to-end sink test using source. Send messages that end up in Pulsar topic. 
