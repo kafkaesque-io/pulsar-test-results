@@ -25,3 +25,12 @@ We strive to continually expand and improve this test plan to ensure the highest
 * Tag: v2.5.1-candidate-4
 * Docker Images: [kafkaesqueio/pulsar-all-v2.5.1-candidate-4](https://hub.docker.com/repository/docker/kafkaesqueio/pulsar-all-v2.5.1-candidate-4)
 * Results: [v2.5.1-candidate-4](https://github.com/kafkaesque-io/pulsar-test-results/blob/master/results-apache-pulsar-v2.5.1-candidate-4.md)
+
+### Apache Pulsar 2.5.2_kesque_2
+
+* Repository: [kafkaesque-io/pulsar](https://github.com/kafkaesque-io/pulsar)
+* Tag: 2.5.2_kesque_2
+* Docker Images: [kafkaesqueio/pulsar-all](https://hub.docker.com/repository/docker/kafkaesqueio/pulsar-all)
+* Results: [2.5.2_kesque_2](https://github.com/kafkaesque-io/pulsar-test-results/blob/master/results-apache-pulsar-2.5.2_kesque-2.md)
+
+
