@@ -166,6 +166,9 @@ This can be tested using Pulsar standalone.
 - [ ] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
 - [ ] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
 - [ ] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [ ] Automatic offload can be configured globally in  `broker.conf`
+- [ ] Automatic offload can be configured at the namespace level
+- [ ] Namespace level automatic offload configuration persists over upgrade
 
 
 ### Functions
