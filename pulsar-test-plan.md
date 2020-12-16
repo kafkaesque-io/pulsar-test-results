@@ -103,6 +103,7 @@ This can be tested using Pulsar standalone.
 - [ ] Consumers can be limited on topic
 - [ ] Publish rate can be limited on topic
 - [ ] Dispatch rate can be limited on topic
+- [ ] Dispatch rate can be limited on subscription
 
 
 ### WebSocket Secure client
@@ -174,6 +175,11 @@ This can be tested using Pulsar standalone.
 - [ ] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
 - [ ] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
 - [ ] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [ ] Automatic offload works for globally configured offload 
+- [ ] Manual offload works for globally configured offload 
+- [ ] Per namespace offload policies can be configured
+- [ ] Automatic offload works for namespace configured offload 
+- [ ] Manual offload works for namespace configured offload 
 
 
 ### Functions
@@ -199,6 +205,8 @@ This can be tested using Pulsar standalone.
 - [ ] Function with metrics
 - [ ] Function logs display correctly
 - [ ] Function stats display correctly
+- [ ] Process runtime for functions 
+- [ ] Kubernetes runtime for functions 
 
 ### Sinks
 
@@ -230,4 +238,34 @@ This can be tested using Pulsar standalone.
 - [ ] Start one instance of a source 
 - [ ] End-to-end sink test using source. Send messages that end up in Pulsar topic.
 - [ ] Source stats display correctly
+
+### Source connectors (executed for each source)
+
+- [ ] Source can read records from the latest version of the 3rd party software (ex Debezium PostgreSQL) and produce to a Pulsar topic
+- [ ] Source can send records to Pulsar topic with no TLS, no authentication
+- [ ] Source can send records to Pulsar topic with TLS enabled
+- [ ] Source can send records to Pulsar topic with authentication enabled
+- [ ] Source software can have TLS enabled
+- [ ] Source software can have authentication enabled
+- [ ] Schema (if applicable) created by source is valid
+- [ ] Source record with null fields produces messages to Pulsar topic
+- [ ] Records produced by source can be read by Pulsar consumer
+- [ ] Records produced by source can be read by Pulsar consumer with schema
+
+
+### Sink connectors (executed for each sink)
+
+- [ ] Sink can read records from Pulsar and publish them to the latest version of the 3rd party software (ex Elasticsearch)
+- [ ] Sink can read records from Pulsar topic with no TLS, no authentication
+- [ ] Sink can read records from Pulsar topic with TLS enabled
+- [ ] Sink can read records from Pulsar topic with authentication enabled
+- [ ] Sink can send records to 3rd party software that has TLS enabled
+- [ ] Sink can send records to 3rd party software that has authentication enabled
+- [ ] Records with null fields can be sent to 3rd party software
+- [ ] Update records (if applicable) can be sent to 3rd party software
+- [ ] Delete (tombstone) records (if applicable) can be sent to 3rd party software
+- [ ] Sink can read records with Avro schema
+- [ ] Sink can read records with JSON schema
+
+
 
