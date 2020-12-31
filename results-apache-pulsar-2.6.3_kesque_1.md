@@ -1,4 +1,4 @@
-# System tests for Pulsar releases
+# TEMPLATE: System tests for Pulsar releases
 
 This document describes the system tests that are to be executed on a candidate Pulsar release.
 
@@ -7,8 +7,11 @@ The developer standalone version can be used for sanity tests, but the majority 
 ## Version under test
 
 * Repository: [kafkaesque-io/pulsar](https://github.com/kafkaesque-io/pulsar)
-* Tag: 2.6.0_kesque_1
+* Tag: 2.6.3_kesque_1, 
 * Docker Images: [kafkaesqueio/pulsar-all](https://hub.docker.com/repository/docker/kafkaesqueio/pulsar-all)
+* Docker Images: [kafkaesqueio/pulsar-all](https://hub.docker.com/repository/docker/datastax/pulsar-all)
+* Tag: 2.6.3_ds_f4fdc0c1cc_1229
+
 
 ## Kubernetes tests
 
@@ -91,11 +94,19 @@ This can be tested using Pulsar standalone.
 - [x] Skip some messages in a subscription
 - [x] Rewind messages in a subscription to a time
 - [x] Rewind messages ins a subscription to a message ID
-- [X] Peek at messages in a subscription on partitioned topic
+- [x] Peek at messages in a subscription on partitioned topic
 - [x] Skip all messages in a subscription on partitioned topic
 - [x] Skip some messages in a subscription on partitioned topic
 - [x] Rewind messages in a subscription to a time on partitioned topic
 - [x] Rewind messages ins a subscription to a message ID on partitioned topic
+
+### Producer and Consumer Limits
+- [x] Producers can be limited on topic
+- [x] Consumers can be limited on subscription
+- [x] Consumers can be limited on topic
+- [x] Publish rate can be limited on topic
+- [x] Dispatch rate can be limited on topic
+- [x] Dispatch rate can be limited on subscription
 
 ### WebSocket Secure client
 
@@ -113,24 +124,24 @@ This can be tested using Pulsar standalone.
 
 ### Java client
 
-- [ ] Connect Java client with TLS and token-based authentication
-- [ ] Producer on secure Java client
-- [ ] Consumer on secure Java client
-- [ ] Reader on secure Java client
+- [x] Connect Java client with TLS and token-based authentication
+- [x] Producer on secure Java client
+- [x] Consumer on secure Java client
+- [x] Reader on secure Java client
 
 ### Message TTL
 
-- [ ] Message TTL can be configured on namespace
-- [ ] Unacked messages are removed from topic when TTL expires
+- [x] Message TTL can be configured on namespace
+- [x] Unacked messages are removed from topic when TTL expires
 
 ### Schema
 
-- [ ] Add schema with producer
-- [ ] Add schema with consumer
-- [ ] Add schema with admin API
-- [ ] Delete schema
-- [ ] Update existing schema on topic using admin API
-- [ ] Schema evolution backward compatibility (remove field)
+- [x] Add schema with producer
+- [x] Add schema with consumer
+- [x] Add schema with admin API
+- [x] Delete schema
+- [x] Update existing schema on topic using admin API
+- [x] Schema evolution backward compatibility (remove field)
 
 ### TLS
 
@@ -139,84 +150,95 @@ This can be tested using Pulsar standalone.
 ### Token-based authentication
 
 - [x] Clients can connect with token-based authentication enabled
-- [ ] Clients with incorrect token are rejected
+- [x] Clients with incorrect token are rejected
 
 ### Message retention
 
-- [ ] Messages can be configured to be retained after they are acknowledged
-- [ ] Retained messages can be added back to subscription
-- [ ] Readers can retrieve all retained messages
+- [x] Messages can be configured to be retained after they are acknowledged
+- [x] Retained messages can be added back to subscription
+- [x] Readers can retrieve all retained messages
 
 ### Non persistent messages
 
-- [ ] Non-persistent messages can be sent and received
-- [ ] Stats for non-persistent messages are correct
+- [x] Non-persistent messages can be sent and received
+- [x] Stats for non-persistent messages are correct
 
 ### Resource clean up
-- [ ] Persistent topics with no consumers/producers/subscriptions are removed
-- [ ] Non-persistent topics with no consumers/producers/subscriptions are removed
-- [ ] Partitioned topics with no consumers/producers/subscriptions are removed     
-- [ ] Subscriptions with no backlog are removed (when enabled)  
-- [ ] Persistent topics that have been cleaned up do not re-appear 
-- [ ] Non-persistent topics that have been cleaned up do not re-appear 
-- [ ] Non-persistent topics with schema that have been cleaned up do not re-appear 
+- [x] Persistent topics with no consumers/producers/subscriptions are removed
+- [x] Non-persistent topics with no consumers/producers/subscriptions are removed
+- [x] Partitioned topics with no consumers/producers/subscriptions are removed     
+- [x] Subscriptions with no backlog are removed (when enabled)  
+- [x] Persistent topics that have been cleaned up do not re-appear 
+- [x] Non-persistent topics that have been cleaned up do not re-appear 
+
+Non-persistent topics re-appear after cleanup if the stats endpoint is called against them.
 
 ### Tiered storage
 
-- [ ] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
-- [ ] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
-- [ ] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
-- [ ] Automatic offload can be configured globally in  `broker.conf`
-- [ ] Automatic offload can be configured at the namespace level
-- [ ] Namespace level automatic offload configuration persists over upgrade
+- [x] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] Automatic offload works for globally configured offload
+- [x] Manual offload works for globally configured offload   
+- [x] Per namespace offload policies can be configured
+- [x] Automatic offload works for namespace configured offload
+- [x] Manual offload works for namespace configured offload
+
 
 
 ### Functions
 
-- [ ] Upload Java function
-- [ ] Upload Python function
-- [ ] Delete Java function
-- [ ] Delete Python function
-- [ ] Update Java function
-- [ ] Update Python function
-- [ ] Trigger Java function
-- [ ] Trigger Python function
-- [ ] Create function with multiple instances
-- [ ] Restart all instances of a function
-- [ ] Restart one instance of a function
-- [ ] Stop all instances of a function
-- [ ] Stop one instance of a function
-- [ ] Start all instances of a function
-- [ ] Start one instance of a function
-- [ ] Function with multiple input topics
-- [ ] Windowed function
-- [ ] Function with state storage
-- [ ] Function with metrics
+- [x] Upload Java function
+- [x] Upload Python function
+- [x] Delete Java function
+- [x] Delete Python function
+- [x] Update Java function
+- [x] Update Python function
+- [x] Trigger Java function
+- [x] Trigger Python function
+- [x] Create function with multiple instances
+- [x] Restart all instances of a function
+- [x] Restart one instance of a function
+- [x] Stop all instances of a function
+- [x] Stop one instance of a function
+- [x] Start all instances of a function
+- [x] Start one instance of a function
+- [x] Function with multiple input topics
+- [x] Windowed function
+- [x] Function with state storage
+- [x] Function logs display correctly
+- [x] Function stats display correctly
+- [x] Process runtime
+- [x] Kubernetes runtime
 
 ### Sinks
 
-- [ ] Add sink from built-ins
-- [ ] Delete a sink
-- [ ] Update a sink
-- [ ] Create sink with multiple instances
-- [ ] Restart all instances of a sink
-- [ ] Restart one instance of a sink
-- [ ] Stop all instances of a sink
-- [ ] Stop one instance of a sink
-- [ ] Start all instances of a sink
-- [ ] Start one instance of a sink
+- [x] Add sink from built-ins
+- [x] Delete a sink
+- [x] Update a sink
+- [x] Create sink with multiple instances
+- [x] Restart all instances of a sink
+- [x] Restart one instance of a sink
+- [x] Stop all instances of a sink
+- [x] Stop one instance of a sink
+- [x] Start all instances of a sink
+- [x] Start one instance of a sink
 - [x] End-to-end sink test using JDBC sink. Publish messages that populate mysql table.
+- [x] Sink stats display correctly
+
 
 ### Source
 
-- [ ] Add source from built-ins
-- [ ] Delete a source
-- [ ] Update a source
-- [ ] Create source with multiple instances
-- [ ] Restart all instances of a source
-- [ ] Restart one instance of a source
-- [ ] Stop all instances of a source
-- [ ] Stop one instance of a source
-- [ ] Start all instances of a source
-- [ ] Start one instance of a source 
-- [x] End-to-end sink test using source. Send messages that end up in Pulsar topic. 
+- [x] Add source from built-ins
+- [x] Delete a source
+- [x] Update a source
+- [x] Create source with multiple instances
+- [x] Restart all instances of a source
+- [x] Restart one instance of a source
+- [x] Stop all instances of a source
+- [x] Stop one instance of a source
+- [x] Start all instances of a source
+- [x] Start one instance of a source
+- [x] End-to-end sink test using source. Send messages that end up in Pulsar topic.
+- [x] Source stats display correctly
+
