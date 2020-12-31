@@ -1,4 +1,4 @@
-# TEMPLATE: System tests for Pulsar releases
+# System test resulsts Pulsar 2.6.3 
 
 This document describes the system tests that are to be executed on a candidate Pulsar release.
 
@@ -7,8 +7,12 @@ The developer standalone version can be used for sanity tests, but the majority 
 ## Version under test
 
 * Repository: [kafkaesque-io/pulsar](https://github.com/kafkaesque-io/pulsar)
-* Tag: 2.6.3_kesque_1, 
+* Branch: kesque_2.6.3 
 * Docker Images: [kafkaesqueio/pulsar-all](https://hub.docker.com/repository/docker/kafkaesqueio/pulsar-all)
+* Tag: 2.6.3_kesque_1 
+
+* Repository: [datastax/pulsar](https://github.com/datastax/pulsar)
+* Branch: 2.6.3_ds
 * Docker Images: [kafkaesqueio/pulsar-all](https://hub.docker.com/repository/docker/datastax/pulsar-all)
 * Tag: 2.6.3_ds_f4fdc0c1cc_1229
 
