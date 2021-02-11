@@ -6,9 +6,10 @@ The developer standalone version can be used for sanity tests, but the majority 
 
 ## Version under test
 
-* Repository:
-* Tag: 
-* Docker Images:
+* Repository: [kafkaesque-io/pulsar](https://github.com/kafkaesque-io/pulsar)
+* Branch: kesque_2.7.1 
+* Docker Images: [kafkaesqueio/pulsar-all-2.7.1](https://hub.docker.com/repository/docker/kafkaesqueio/pulsar-all)
+* Tag: latest 
 
 ## Kubernetes tests
 
@@ -16,18 +17,14 @@ The developer standalone version can be used for sanity tests, but the majority 
 
 Perf client in these tests can be connected using bastion
 
-- [ ] Docker images install in Minikube/kind using Helm
-- [ ] Helm upgrade from previous release to new Docker images
-- [ ] Rollout restart Zookeeper with connected perf client
-- [ ] Rollout restart BookKeeper with connected perf client
-- [ ] Rollout restart Broker with connected perf client
-- [ ] Rollout restart Proxy with connected perf client
+- [x] Docker images install in Minikube/kind using Helm
+- [x] Helm upgrade from previous release to new Docker images
 
 ### Deployment using cloud-based Kubernetes cluster
 
 Perf client in these tests must be external to the cluster
 
-- [ ] Upgrade from previous release to new Docker images
+- [x] Upgrade from previous release to new Docker images
 - [ ] Rollout restart Zookeeper with connected perf client
 - [ ] Rollout restart BookKeeper with connected perf client
 - [ ] Rollout restart Broker with connected perf client
@@ -172,9 +169,9 @@ This can be tested using Pulsar standalone.
 
 ### Tiered storage
 
-- [ ] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
-- [ ] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
-- [ ] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] AWS S3. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] Google Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
+- [x] Tardigrade Cloud Storage. Messages offloaded to tiered storage and retrieved from tiered storage
 - [ ] Automatic offload works for globally configured offload 
 - [ ] Manual offload works for globally configured offload 
 - [ ] Per namespace offload policies can be configured
@@ -206,13 +203,13 @@ This can be tested using Pulsar standalone.
 - [ ] Function logs display correctly
 - [ ] Function stats display correctly
 - [ ] Process runtime for functions 
-- [ ] Kubernetes runtime for functions 
+- [x] Kubernetes runtime for functions 
 
 ### Sinks
 
-- [ ] Add sink from built-ins
-- [ ] Delete a sink
-- [ ] Update a sink
+- [x] Add sink from built-ins
+- [x] Delete a sink
+- [x] Update a sink
 - [ ] Create sink with multiple instances
 - [ ] Restart all instances of a sink
 - [ ] Restart one instance of a sink
@@ -239,12 +236,13 @@ This can be tested using Pulsar standalone.
 - [ ] End-to-end sink test using source. Send messages that end up in Pulsar topic.
 - [ ] Source stats display correctly
 
-### Pulsar SQL
-- [ ] SQL coordinator can be used to query schema and tables
-- [ ] SQL worker can be configured and can be used when doing queries
-- [ ] Message that are offloaded to tiered storage can be queried 
-- [ ] Last message published can be queried even if no new messages are published
 
+### Pulsar SQL
+- [x] SQL coordinator can be used to query schema and tables
+- [x] SQL worker can be configured and can be used when doing queries 
+- [x] Messages that are offloaded to tiered storage can be queried 
+- [x] Last message published can be queried even if no new messages are published (requires explictLAC set)
+ 
 
 ### Source connectors (executed for each source)
 
